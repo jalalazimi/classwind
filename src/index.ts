@@ -1,49 +1,51 @@
-function toVal(mix: unknown): string {
-  let k: string | number
-  let y: string
+type PrimitiveTypes = string | number | null | boolean | undefined
+type ClasswindDictionary = Record<string, PrimitiveTypes>
+type ClasswindArray = ClasswindValue[]
+type ClasswindValue = ClasswindArray | ClasswindDictionary | PrimitiveTypes
+
+function concat(string: string, newString: string | number | boolean = '') {
+  return (string && (string += ' ')) + newString
+}
+function arrayToString(arr: ClasswindArray) {
   let str = ''
-
-  if (typeof mix === 'string' || typeof mix === 'number') {
-    str += mix
+  let val
+  const len = arr.length
+  for (let i = 0; i < len; i++) {
+    val = stringify(arr[i])
+    if (val)
+      str = concat(str, val)
   }
-  else if (typeof mix === 'object') {
-    if (Array.isArray(mix)) {
-      const len = mix.length
-      for (k = 0; k < len; k++) {
-        if (mix[k]) {
-          if ((y = toVal(mix[k]))) {
-            str && (str += ' ')
-            str += y
-          }
-        }
-      }
-    }
-    else {
-      for (k in mix) {
-        if (mix[k]) {
-          str && (str += ' ')
-          str += k
-        }
-      }
-    }
+  return str
+}
+function ObjectToString(obj: ClasswindDictionary | null) {
+  let str = ''
+  for (const key in obj) {
+    if (obj[key])
+      str = concat(str, key)
   }
-
   return str
 }
 
-export default function classwind(...args: unknown[]): string {
-  let i = 0
-  let tmp
-  let x
-  let str = ''
+function stringify(val: ClasswindValue) {
+  if (typeof val === 'string' || typeof val === 'number')
+    return val || ''
+  if (typeof val === 'object') {
+    if (Array.isArray(val))
+      return arrayToString(val)
+    else return ObjectToString(val)
+  }
+}
+
+function classwind(...args: ClasswindValue[]) {
+  let result = ''
   const len = args.length
-  for (; i < len; i++) {
-    if ((tmp = args[i])) {
-      if ((x = toVal(tmp))) {
-        str && (str += ' ')
-        str += x
-      }
-    }
+  for (let i = 0; i < len; i++) {
+    const className = stringify(args[i])
+    if (className)
+      result = concat(result, className)
   }
-  return str
+
+  return result
 }
+
+export default classwind

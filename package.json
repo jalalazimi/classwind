@@ -3,9 +3,9 @@
   "type": "module",
   "version": "1.0.0",
   "packageManager": "pnpm@8.1.1",
-  "repository": "https://github.com/jalalazimi/classwind",
   "author": "Jalal azimi <jalalazimi@gmail.com>",
   "license": "MIT",
+  "repository": "https://github.com/jalalazimi/classwind",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -35,12 +35,16 @@
     "release": "bumpp && npm publish",
     "start": "esno src/index.ts",
     "test": "vitest",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "pref": "pnpm build && node ./benchmark"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.38.4",
     "@types/node": "^18.15.11",
+    "benchmark": "^2.1.4",
     "bumpp": "^9.1.0",
+    "classnames": "^2.3.2",
+    "clsx": "^1.2.1",
     "eslint": "^8.37.0",
     "esno": "^0.16.3",
     "lint-staged": "^13.2.0",

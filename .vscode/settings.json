@@ -1,12 +1,15 @@
 {
-    "prettier.enable": false,
-    "editor.formatOnSave": false,
-    "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true
-    },
-    "workbench.colorCustomizations": {
-      "activityBar.background": "#49135E",
-      "titleBar.activeBackground": "#661A84",
-      "titleBar.activeForeground": "#FCF9FE"
-    }
-  }
+  "prettier.enable": false,
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#49135E",
+    "titleBar.activeBackground": "#661A84",
+    "titleBar.activeForeground": "#FCF9FE"
+  },
+  "cSpell.words": [
+    "classwind"
+  ]
+}
