@@ -4,7 +4,10 @@
   "version": "1.1.0",
   "author": "Jalal Azimi <jalalazimi@gmail.com>",
   "license": "MIT",
-  "repository": "https://github.com/jalalazimi/classwind",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jalalazimi/classwind.git"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -30,7 +33,7 @@
     "build": "unbuild",
     "dev": "unbuild --stub",
     "lint": "eslint .",
-    "prepublishOnly": "nr build",
+    "prepublishOnly": "yarn build",
     "release": "bumpp && npm publish",
     "start": "esno src/index.ts",
     "test": "vitest",

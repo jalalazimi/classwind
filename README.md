@@ -1,15 +1,15 @@
 <p align="center">
-  <img src="./assets/classwind.png" width="350" title="hover text">
+  <img src="./assets/classwind.png" width="350" title="Classwind">
 </p>
 
 # Classwind
 
-Classwind is a leading JavaScript utility library renowned for its unparalleled speed and efficiency in generating class names for HTML elements. It is optimized for performance, boasting the fastest execution time compared to other libraries in its class. With Classwind, developers can dynamically generate class names from objects, arrays, and strings, streamlining the development process and enhancing productivity.
+Classwind is a JavaScript utility library designed to simplify the process of creating class names for HTML elements. It provides a quick and efficient way to assemble class names dynamically from various inputs like objects, arrays, and strings. Focusing on performance and ease of use, Classwind is well-suited for projects of all sizes and complexities, thanks to its small footprint and flexible nature.
 
 ## Quick features
 
 - ⚡ **Blazing Speed**: Unmatched performance.
-- 🪶 **Ultra-Lightweight**: Just 932 B!
+- 🪶 **Ultra-Lightweight**: Just 331B!
 - 🌐 **Framework Agnostic**: Fits any setup.
 - 🛠️ **Easy Integration**: NPM, Yarn, CDN.
 - 🔒 **TypeScript**: Built for reliability.
@@ -50,46 +50,46 @@ Embrace the simplicity and power of Classwind with additional examples to demons
 ### Example 1: Object Input
 
 ```javascript
-import classwind from 'classwind';
+import cw from 'classwind';
 
-const classes = classwind({ 'bg-red-500': true, 'text-white': true, 'p-4': true });
+const classes = cw({ 'bg-red-500': true, 'text-white': true, 'p-4': true });
 // Result: 'bg-red-500 text-white p-4'
 ```
 
 ### Example 2: Array Input
 
 ```javascript
-import classwind from 'classwind';
+import cw from 'classwind';
 
-const classes = classwind(['text-lg', 'font-bold', { 'text-red-500': true }]);
+const classes = cw(['text-lg', 'font-bold', { 'text-red-500': true }]);
 // Result: 'text-lg font-bold text-red-500'
 ```
 
 ### Example 3: String Input
 
 ```javascript
-import classwind from 'classwind';
+import cw from 'classwind';
 
-const classes = classwind('bg-gray-200', 'p-4');
+const classes = cw('bg-gray-200', 'p-4');
 // Result: 'bg-gray-200 p-4'
 ```
 
 ### Example 4: Combining Methods
 
 ```javascript
-import classwind from 'classwind';
+import cw from 'classwind';
 
-const classes = classwind('border-2', { 'hidden': false, 'text-green-500': true }, ['rounded-lg']);
+const classes = cw('border-2', { 'hidden': false, 'text-green-500': true }, ['rounded-lg']);
 // Result: 'border-2 text-green-500 rounded-lg'
 ```
 
 ### Example 5: Conditional Classes
 
 ```javascript
-import classwind from 'classwind';
+import cw from 'classwind';
 
 const isError = true;
-const classes = classwind('text-base', { 'text-error': isError, 'text-normal': !isError });
+const classes = cw('text-base', { 'text-error': isError, 'text-normal': !isError });
 // Result when isError is true: 'text-base text-error'
 ```
 
