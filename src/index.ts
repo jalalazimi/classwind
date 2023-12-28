@@ -3,36 +3,31 @@ type ClasswindDictionary = Record<string, PrimitiveTypes>
 type ClasswindArray = ClasswindValue[]
 type ClasswindValue = ClasswindArray | ClasswindDictionary | PrimitiveTypes
 
-function concat(string: string, newString: string | number | boolean = '') {
-  return (string && (string += ' ')) + newString
-}
-function arrayToString(arr: ClasswindArray) {
-  let str = ''
-  let val
-  const len = arr.length
-  for (let i = 0; i < len; i++) {
-    val = stringify(arr[i])
-    if (val)
-      str = concat(str, val)
-  }
-  return str
-}
-function ObjectToString(obj: ClasswindDictionary | null) {
-  let str = ''
-  for (const key in obj) {
-    if (obj[key])
-      str = concat(str, key)
-  }
-  return str
-}
-
 function stringify(val: ClasswindValue) {
   if (typeof val === 'string' || typeof val === 'number')
-    return val || ''
-  if (typeof val === 'object') {
-    if (Array.isArray(val))
-      return arrayToString(val)
-    else return ObjectToString(val)
+    return val
+
+  if (typeof val === 'object' && val !== null) {
+    if (Array.isArray(val)) {
+      const len = val.length
+      let str = ''
+      for (let i = 0; i < len; i++) {
+        const className = stringify(val[i])
+        if (!className)
+          continue
+        str = (str && (str += ' ')) + className
+      }
+      return str
+    }
+    else {
+      let str = ''
+      for (const key in val) {
+        if (!val[key])
+          continue
+        str = (str && (str += ' ')) + key
+      }
+      return str
+    }
   }
 }
 
@@ -41,8 +36,9 @@ function classwind(...args: ClasswindValue[]) {
   const len = args.length
   for (let i = 0; i < len; i++) {
     const className = stringify(args[i])
-    if (className)
-      result = concat(result, className)
+    if (!className)
+      continue
+    result = (result && (result += ' ')) + className
   }
 
   return result
