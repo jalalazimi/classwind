@@ -2,6 +2,7 @@
   "name": "classwind",
   "type": "module",
   "version": "1.1.1",
+  "description": "⚡ Ultra-fast 331B JS utility for dynamic class names, framework-independent, TypeScript-compatible. 🛠️",
   "author": "Jalal Azimi <jalalazimi@gmail.com>",
   "license": "MIT",
   "repository": {
