@@ -9,6 +9,14 @@
     "type": "git",
     "url": "git+https://github.com/jalalazimi/classwind.git"
   },
+  "keywords": [
+    "react",
+    "classes",
+    "classname",
+    "classnames",
+    "utility",
+    "tailwindcss"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
