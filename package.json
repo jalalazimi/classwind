@@ -2,15 +2,14 @@
   "name": "classwind",
   "type": "module",
   "version": "1.0.0",
-  "packageManager": "pnpm@8.1.1",
-  "author": "Jalal azimi <jalalazimi@gmail.com>",
+  "author": "Jalal Azimi <jalalazimi@gmail.com>",
   "license": "MIT",
   "repository": "https://github.com/jalalazimi/classwind",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.mjs"
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
     }
   },
   "main": "./dist/index.mjs",
@@ -36,28 +35,30 @@
     "start": "esno src/index.ts",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
-    "pref": "pnpm build && node ./benchmark"
+    "prepare": "simple-git-hooks",
+    "pref": "yarn build && cd ./benchmark && node ."
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.38.4",
-    "@types/node": "^18.15.11",
+    "@antfu/eslint-config": "^2.4.6",
+    "@types/node": "^20.10.4",
     "benchmark": "^2.1.4",
-    "bumpp": "^9.1.0",
-    "classnames": "^2.3.2",
-    "clsx": "^1.2.1",
-    "eslint": "^8.37.0",
-    "esno": "^0.16.3",
-    "lint-staged": "^13.2.0",
-    "pnpm": "^8.1.1",
-    "rimraf": "^4.4.1",
-    "simple-git-hooks": "^2.8.1",
-    "typescript": "^5.0.3",
-    "unbuild": "^1.2.0",
-    "vite": "^4.2.1",
-    "vitest": "^0.29.8"
+    "bumpp": "^9.2.1",
+    "classcat": "^3.2.5",
+    "classnames": "^2.2.6",
+    "classwind": "^1.0.0",
+    "clsx": "1.1.0",
+    "eslint": "^8.56.0",
+    "esno": "^4.0.0",
+    "lint-staged": "^15.2.0",
+    "rimraf": "^5.0.5",
+    "simple-git-hooks": "^2.9.0",
+    "typescript": "^5.3.3",
+    "unbuild": "^2.0.0",
+    "vite": "^5.0.10",
+    "vitest": "^1.0.4"
   },
   "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged"
+    "pre-commit": "yarn lint-staged"
   },
   "lint-staged": {
     "*": "eslint --fix"
@@ -67,5 +68,9 @@
     "jsxSingleQuote": true,
     "singleQuote": true,
     "trailingComma": "none"
+  },
+  "volta": {
+    "node": "20.10.0",
+    "yarn": "4.0.0"
   }
 }
