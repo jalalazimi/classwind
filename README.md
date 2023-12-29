@@ -177,6 +177,8 @@ Here's the comparison of each library's performance relative to the fastest in t
 | clsx       | 3,389,576 ops/sec ±3.83% (95 runs sampled)|
 | classwind  | 3,837,358 ops/sec ±1.22% (96 runs sampled)|
 
+
+> Perf on Apple M3 Pro, 36 GB RAM
 </details>
 
 ## API Reference
