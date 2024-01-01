@@ -1,10 +1,12 @@
 <p align="center">
-  <img src="./assets/classwind.png" width="350" title="Classwind">
+  <img src="./assets/classwind.png" width="350" title="Classwind" alt="Classwind logo">
 </p>
 
 # Classwind
 
 Classwind is a JavaScript utility library designed to simplify the process of creating class names for HTML elements. It provides a quick and efficient way to assemble class names dynamically from various inputs like objects, arrays, and strings. Focusing on performance and ease of use, Classwind is well-suited for projects of all sizes and complexities, thanks to its small footprint and flexible nature.
+
+**Note:** Classwind is a fork of [clsx](https://github.com/lukeed/clsx) with a very similar API. The key differences are that Classwind is developed in TypeScript, and it incorporates [some changes](https://github.com/lukeed/clsx/pull/26) I proposed to clsx, which have since been merged. I aim to expand Classwind with additional features going forward, but as of now, the differences from clsx are minor, so feel free to continue using clsx if it suits your needs.
 
 ## Quick features
 
@@ -35,19 +37,11 @@ Alternatively, you can use Yarn to add Classwind to your project:
 yarn add classwind
 ```
 
-#### Via CDN
-
-For immediate use in your web pages, incorporate Classwind through the jsDelivr CDN:
-
-```html
-<script src="https://cdn.jsdelivr.net/npm/classwind/dist/classwind.min.js"></script>
-```
-
 ## Usage
 
 Embrace the simplicity and power of Classwind with additional examples to demonstrate its versatility.
 
-### Example 1: Object Input
+### Object Input
 
 ```javascript
 import cw from 'classwind';
@@ -56,7 +50,7 @@ const classes = cw({ 'bg-red-500': true, 'text-white': true, 'p-4': true });
 // Result: 'bg-red-500 text-white p-4'
 ```
 
-### Example 2: Array Input
+### Array Input
 
 ```javascript
 import cw from 'classwind';
@@ -65,7 +59,7 @@ const classes = cw(['text-lg', 'font-bold', { 'text-red-500': true }]);
 // Result: 'text-lg font-bold text-red-500'
 ```
 
-### Example 3: String Input
+### String Input
 
 ```javascript
 import cw from 'classwind';
@@ -74,7 +68,7 @@ const classes = cw('bg-gray-200', 'p-4');
 // Result: 'bg-gray-200 p-4'
 ```
 
-### Example 4: Combining Methods
+### Combining Methods
 
 ```javascript
 import cw from 'classwind';
@@ -83,7 +77,7 @@ const classes = cw('border-2', { 'hidden': false, 'text-green-500': true }, ['ro
 // Result: 'border-2 text-green-500 rounded-lg'
 ```
 
-### Example 5: Conditional Classes
+### Conditional Classes
 
 ```javascript
 import cw from 'classwind';
@@ -97,7 +91,7 @@ const classes = cw('text-base', { 'text-error': isError, 'text-normal': !isError
 
 **Classwind stands alone in its speed and efficiency**, setting a new standard as the fastest class name generation library available. It's designed for rapid execution and minimal footprint, ensuring optimal performance in every project.
 <details>
-<summary>Performance details</summary>
+<summary> <b>Performance details</b> </summary>
 
 Here's the comparison of each library's performance relative to the fastest in their respective categories:
 

@@ -1707,21 +1707,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"classcat@npm:^3.2.5":
-  version: 3.2.5
-  resolution: "classcat@npm:3.2.5"
-  checksum: 4dc8cae627a6c6b280a7db11beeda1a4b99aded449062649836a8c0ecd530a75f21948adb5d976ba0f35e9460b826648d8ef30c02b40c538c9ab2366ab472648
+"classcat@npm:^5.0.4":
+  version: 5.0.4
+  resolution: "classcat@npm:5.0.4"
+  checksum: 614880d801128bac1ffb4e9c6a0e5fa93ef693469b2e8546a4bf939c7aff6bbfe1fb047c42bb6c4ad43f74ab86b75fcea6484b9fbf9b238588d3c5dbd497c248
   languageName: node
   linkType: hard
 
-"classnames@npm:^2.2.6":
-  version: 2.3.2
-  resolution: "classnames@npm:2.3.2"
-  checksum: cd50ead57b4f97436aaa9f9885c6926323efc7c2bea8e3d4eb10e4e972aa6a1cfca1c7a0e06f8a199ca7498d4339e30bb6002e589e61c9f21248cbf3e8b0b18d
+"classnames@npm:^2.5.1":
+  version: 2.5.1
+  resolution: "classnames@npm:2.5.1"
+  checksum: afff4f77e62cea2d79c39962980bf316bacb0d7c49e13a21adaadb9221e1c6b9d3cdb829d8bb1b23c406f4e740507f37e1dcf506f7e3b7113d17c5bab787aa69
   languageName: node
   linkType: hard
 
-"classwind@npm:^1.0.0, classwind@workspace:.":
+"classwind@npm:^1.1.3, classwind@workspace:.":
   version: 0.0.0-use.local
   resolution: "classwind@workspace:."
   dependencies:
@@ -1729,10 +1729,10 @@ __metadata:
     "@types/node": "npm:^20.10.4"
     benchmark: "npm:^2.1.4"
     bumpp: "npm:^9.2.1"
-    classcat: "npm:^3.2.5"
-    classnames: "npm:^2.2.6"
-    classwind: "npm:^1.0.0"
-    clsx: "npm:1.1.0"
+    classcat: "npm:^5.0.4"
+    classnames: "npm:^2.5.1"
+    classwind: "npm:^1.1.3"
+    clsx: "npm:^2.1.0"
     eslint: "npm:^8.56.0"
     esno: "npm:^4.0.0"
     lint-staged: "npm:^15.2.0"
@@ -1791,10 +1791,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"clsx@npm:1.1.0":
-  version: 1.1.0
-  resolution: "clsx@npm:1.1.0"
-  checksum: 7a3478c7757fd031ddc6a12c5e65eb29559df6ae7c89a52a89d177af130834eb914b1b80318a806cae43b3063d0b9cf70c8cbfedc2f60160e299d3b14cbeb400
+"clsx@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "clsx@npm:2.1.0"
+  checksum: c09c00ad14f638366ca814097e6cab533dfa1972a358da5b557be487168acbb25b4c1395e89ffa842a8a61ba87a462d2b4885bc9d4f8410b598f3cb339599cdb
   languageName: node
   linkType: hard
 
